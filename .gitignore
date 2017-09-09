@@ -5,5 +5,6 @@
 *.out
 *.bbl
 *.blg
+*.pdf
 
 *.class
