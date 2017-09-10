@@ -1,0 +1,18 @@
+
+# Test script:
+# Calculates the avarage of two integers.
+
+i0 = sint.get_raw_input_from(0)
+i1 = sint.get_raw_input_from(1)
+
+#i0 = sint(50)
+#i1 = sint(31)
+
+i_sum = i0 + i1
+i_sum_clear = i_sum.reveal()
+
+#avg = i_sum / 2
+#print_ln('Avarage: %s', avg.reveal())
+
+print_ln('Sum: %s', i_sum_clear)
+print_ln('Avarage: %s', i_sum_clear / 2)
