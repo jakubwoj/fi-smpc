@@ -16,7 +16,7 @@ Vagrant.configure("2") do |config|
 
   config.vm.provider "virtualbox" do |vb|
     #   vb.gui = true
-    vb.customize ["modifyvm", :id, "--memory", "256"]
+    vb.customize ["modifyvm", :id, "--memory", "512"]
   end
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs

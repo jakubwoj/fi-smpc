@@ -1,6 +1,6 @@
 
 # Test script:
-# Calculates the avarage of two integers.
+# Calculates the average of two integers.
 
 i0 = sint.get_raw_input_from(0)
 i1 = sint.get_raw_input_from(1)

@@ -31,5 +31,18 @@ unzip master.zip
 mv SPDZ-2-master SPDZ-2
 cd SPDZ-2
 
+sed -i "s/\(USE_GF2N_LONG *= *\).*/\11/" ./CONFIG
+
+wget https://github.com/pascholl/SimpleOT/archive/52b43a250922fb45f0bfff73ba2f9b9a11c1784c.zip
+unzip 52b43a250922fb45f0bfff73ba2f9b9a11c1784c.zip
+
+rm -R SimpleOT
+mv SimpleOT-52b43a250922fb45f0bfff73ba2f9b9a11c1784c SimpleOT
+cd SimpleOT
+
+make
+
+cd ..
+
 make
 
