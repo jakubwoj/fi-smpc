@@ -1,24 +1,61 @@
 
 \section{Introduction}
 
-\cite{cryptoeprint:2016:505}
+Secure multi-party Computation (SMPC) is a cryptographic method to perform joint calculations by multiple parties without them getting to know each other's inputs.
 
-Sharemind
+% TODO Describe SMPC. Offline, online phase
 
-Lange Zeit theoretisch, jetzt praktisch implementierbar. Performance.
-Viele Frameworks entstanden. Aktiv.
+The mathematical groundwork has been laid in the 90s, but SMPC was just considered theoretically for a long time.
+Only in recent years, due to better performance and advancements in SMPC protocols, practical implementations have become feasible.
 
+A few actively developed and maintained frameworks have been created.
+Among them are e.g. Sharemind, FRESCO, Bristol SPDZ, ...
+This paper looks at two of them in detail: FRESCO and Bristol SPDZ.
 
-\section{Considered SMC frameworks}
+In section~\ref{sec:frameworks} each framework is described on it's own, while in section~\ref{sec:assessment} they are compared to each other.
+
+\section{Considered SMPC frameworks}
+\label{sec:frameworks}
+
+The considered frameworks FRESCO and Bristol SPDZ are both active open-source SMPC solutions developed on GitHub.
+And that are all the similarities, virtually everything else about them is different.
+The frameworks use different tool-sets, follow different philosophies, and have been developed for different reasons.
 
 \subsection{FRESCO}
 
-\subsection{SPDZ / MASCOT}
+Developed in Java.
+
+Packaged with all dependencies in a JAR by Maven.
+
+Meant as a abstraction allowing the same computations to be performed using different SMPC protocols.
+Implements BGW, SPDZ.
+
+% TODO Explain BGW, SPDZ
+
+Computations to be written in Java.
+Sequence of computation steps to be defined.
+Compiled into single Java application.
+
+\subsection{Bristol SPDZ}
+
+Developed in C++, Python.
+
+Dependencies have to be installed manually.
+
+Implementation of the SPDZ protocol and an showcasing of the improved offline phase MASCOT\cite{KOS2016}.
+
+% TODO Explain MASCOT
+
+Computations to be written in Python.
+Sequence of computation steps inferred automatically. % TODO check.
+Multiple files generated.
+Each phase has to run manually.
 
 
+\section{Assessment of the frameworks}
+\label{sec:assessment}
 
-
-\section{Assesment of the frameworks}
+The frameworks are compared and assessed in respect to practicality and performance.
 
 \subsection{Setup and methodology}
 
@@ -28,25 +65,32 @@ Plain VM. + goal: computing of ...
 
 + dependencies
 
+\paragraph{Bristol SPDZ}
+
+apt-get install g++
+
+MPIR:
+sudo apt-get install m4
+
+
 
 \subsection{Usability}
 
+Practicality
+
 \subsubsection{FRESCO}
 
-\subsubsection{SPDZ / MASCOT}
+\subsubsection{Bristol SPDZ}
 
 
 \subsection{Performance}
 
 \subsubsection{FRESCO}
 
-\subsubsection{SPDZ / MASCOT}
+\subsubsection{Bristol SPDZ}
 
 
 \section{Conclusion}
+\label{sec:conclusion}
 
-\cite{cryptoeprint:2011:535}
 
-\cite{cryptoeprint:2012:642}
-
-\cite{GBW88}
